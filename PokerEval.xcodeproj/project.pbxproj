@@ -10,6 +10,9 @@
 		C39EE7F4158EBCA7001C1623 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39EE7F3158EBCA7001C1623 /* Foundation.framework */; };
 		C39EE7F7158EBCA7001C1623 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C39EE7F6158EBCA7001C1623 /* main.m */; };
 		C39EE7FB158EBCA7001C1623 /* PokerEval.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C39EE7FA158EBCA7001C1623 /* PokerEval.1 */; };
+		C39EE823158EBE28001C1623 /* HandEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = C39EE822158EBE28001C1623 /* HandEvaluator.m */; };
+		C39EE826158EC1CC001C1623 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = C39EE825158EC1CC001C1623 /* Card.m */; };
+		C39EE82A158EC27E001C1623 /* HoldemHandDistribution.m in Sources */ = {isa = PBXBuildFile; fileRef = C39EE829158EC27E001C1623 /* HoldemHandDistribution.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +32,15 @@
 		C39EE7EF158EBCA7001C1623 /* PokerEval */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PokerEval; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39EE7F3158EBCA7001C1623 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C39EE7F6158EBCA7001C1623 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C39EE7F9158EBCA7001C1623 /* PokerEval-Prefix.pch */ = {isa = PBXFileReference; path = "PokerEval-Prefix.pch"; sourceTree = "<group>"; };
+		C39EE7F9158EBCA7001C1623 /* PokerEval-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PokerEval-Prefix.pch"; sourceTree = "<group>"; };
 		C39EE7FA158EBCA7001C1623 /* PokerEval.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = PokerEval.1; sourceTree = "<group>"; };
+		C39EE821158EBE28001C1623 /* HandEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandEvaluator.h; sourceTree = "<group>"; };
+		C39EE822158EBE28001C1623 /* HandEvaluator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandEvaluator.m; sourceTree = "<group>"; };
+		C39EE824158EC1CC001C1623 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		C39EE825158EC1CC001C1623 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		C39EE827158EC222001C1623 /* HandEvaluatorLookupTables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandEvaluatorLookupTables.h; sourceTree = "<group>"; };
+		C39EE828158EC27E001C1623 /* HoldemHandDistribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoldemHandDistribution.h; sourceTree = "<group>"; };
+		C39EE829158EC27E001C1623 /* HoldemHandDistribution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoldemHandDistribution.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +58,14 @@
 		C39EE7E4158EBCA7001C1623 = {
 			isa = PBXGroup;
 			children = (
-				C39EE7F5158EBCA7001C1623 /* PokerEval */,
+				C39EE821158EBE28001C1623 /* HandEvaluator.h */,
+				C39EE822158EBE28001C1623 /* HandEvaluator.m */,
+				C39EE827158EC222001C1623 /* HandEvaluatorLookupTables.h */,
+				C39EE828158EC27E001C1623 /* HoldemHandDistribution.h */,
+				C39EE829158EC27E001C1623 /* HoldemHandDistribution.m */,
+				C39EE824158EC1CC001C1623 /* Card.h */,
+				C39EE825158EC1CC001C1623 /* Card.m */,
+				C39EE7F5158EBCA7001C1623 /* Demo */,
 				C39EE7F2158EBCA7001C1623 /* Frameworks */,
 				C39EE7F0158EBCA7001C1623 /* Products */,
 			);
@@ -70,13 +87,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C39EE7F5158EBCA7001C1623 /* PokerEval */ = {
+		C39EE7F5158EBCA7001C1623 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
 				C39EE7F6158EBCA7001C1623 /* main.m */,
 				C39EE7FA158EBCA7001C1623 /* PokerEval.1 */,
 				C39EE7F8158EBCA7001C1623 /* Supporting Files */,
 			);
+			name = Demo;
 			path = PokerEval;
 			sourceTree = "<group>";
 		};
@@ -139,6 +157,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C39EE7F7158EBCA7001C1623 /* main.m in Sources */,
+				C39EE823158EBE28001C1623 /* HandEvaluator.m in Sources */,
+				C39EE826158EC1CC001C1623 /* Card.m in Sources */,
+				C39EE82A158EC27E001C1623 /* HoldemHandDistribution.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
